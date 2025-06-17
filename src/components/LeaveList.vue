@@ -72,7 +72,7 @@ export default {
       try {
         const apiBase = import.meta.env.VITE_API_BASE_URL
         const token = localStorage.getItem('token')
-        const res = await axios.get(`${apiBase}/leaves?page=${this.page}&limit=${this.perPage}`, {
+        const res = await axios.get(`${apiBase}/user/leaves?page=${this.page}&limit=${this.perPage}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
